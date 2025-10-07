@@ -66,6 +66,7 @@ done:		for (i=0; i<10; i++) {
 		System.out.println("После цикла по i");
 
 		System.out.println();
+
 		//Иллюстрация влияния позиции метки на поведение циклов
 		int x=0, y=0;
 		
@@ -86,6 +87,25 @@ stop2:		{
 			}
 		}
 		System.out.println();
+		
+		//Оператор continue
+		for(i=0; i<=10; i++) {
+			if((i%2) != 0) 
+				continue;
+			System.out.print(i + " ");
+		}
+		System.out.println();
 
+		//Применение continue с меткой
+outerloop:
+		for(i=1; i<10; i++) {
+			System.out.print("\nВншений цикл: проход " + i + ", внутренний цикл: ");
+			for(int j=1; j<10; j++) {
+				if(j==5) 
+					continue outerloop;
+				System.out.print(j);
+			}
+		}
+		System.out.println();
 	}
 }
